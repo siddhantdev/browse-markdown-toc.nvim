@@ -59,8 +59,19 @@ function M.show_toc()
     vim.cmd.lopen()
 end
 
-function M.setup()
+function M.setup(opts)
     vim.api.nvim_create_user_command("ShowToc", M.show_toc, {})
+
+    local keymap
+    if opts.keymap == false then
+        keymap = false
+    else
+        keymap = true
+    end
+
+    if keymap then
+        vim.keymap.set("n", "gO", "<Cmd>ShowToc<CR>", { bufnr = bufnr })    
+    end
 end
 
 return M
