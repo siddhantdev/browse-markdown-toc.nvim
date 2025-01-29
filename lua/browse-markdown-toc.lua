@@ -70,7 +70,7 @@ function M.setup(opts)
     end
 
     if keymap then
-        vim.keymap.set("n", "gO", "<Cmd>ShowToc<CR>", { bufnr = bufnr })    
+        vim.keymap.set("n", "gO", "<Cmd>ShowToc<CR>", { buffer = true })
     end
 end
 
