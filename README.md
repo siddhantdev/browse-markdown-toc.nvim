@@ -9,7 +9,7 @@ With `lazy.nvim`, you can install the plugin like this:
 ```lua
 {
     'siddhantdev/browse-markdown-toc.nvim',
-    ft = { "markdown" }
+    ft = { "markdown" },
     opts = {}
 }
 ```
